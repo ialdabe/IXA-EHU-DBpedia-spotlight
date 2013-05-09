@@ -35,66 +35,62 @@ manually control each step of the process.
 
 Steps: 
 
-1) Download the dbpedia spotlight
+1 Download the dbpedia spotlight
 
    git clone https://github.com/dbpedia-spotlight/dbpedia-spotlight.git
 
-   The latest version of the dbpedia-spotlight is obtained and it is stored in the "dbpedia-spotlight" directory
+The latest version of the dbpedia-spotlight is obtained and it is stored in the "dbpedia-spotlight" directory
 
-2) Modify some of the configuration files
+2 Modify some of the configuration files
 
-   Copy from IXA-EHU-DBpedia-spotlight to dbpedia-spotlight the following files:
+Copy from IXA-EHU-DBpedia-spotlight to dbpedia-spotlight the following files:
 
-   - pom.xml
-   - core/pom.xml
-   - conf/server_en.properties
-   - conf/server_es.properties
+     - pom.xml
+     - core/pom.xml
+     - conf/server_en.properties
+     - conf/server_es.properties
 
-   server_en.properties and server_es.properties files contain the necessary information to run two different services: one to work with English and another one to work with Spanish
+server_en.properties and server_es.properties files contain the necessary information to run two different services: one to work with English and another one to work with Spanish
 
-   The two pom.xml files are modified versions of the original ones to adapt the depedencies to our needs. 
+The two pom.xml files are modified versions of the original ones to adapt the depedencies to our needs. 
 
-3) Install the dbpedia spotlight
+3 Install the dbpedia spotlight
 
-   cd dbpedia-spotlight
-   mvn clean install
+  cd dbpedia-spotlight
+  mvn clean install
 
-4) Create a jar to run the dbpedia spotlight as a service
+4 Create a jar to run the dbpedia spotlight as a service
 
-   cd dbpedia-spotlight/dist
-   mvn clean package
+  cd dbpedia-spotlight/dist
+  mvn clean package
 
-   This command creates (among others)
+This command creates (among others)
 
-   - dbpedia-spotlight-0.6-jar-with-dependencies.jar: a jar containing all the necessary classes to run the dbpedia-spotlight with all the required dependencies
-     This jar is obtained with two purposes: a) to run the server, and b) to be used by other programs 
+     - dbpedia-spotlight-0.6-jar-with-dependencies.jar: a jar containing all the necessary classes to run the dbpedia-spotlight with all the required dependencies. This jar is obtained with two purposes: a) to run the server, and b) to be used by other programs 
 
-   The jar is automatically copied to the bin directory of the
-   dbpedia-spotlight. It will be used to run the server and to be used
-   by other programs. Be careful, if you move it, be sure to change
-   the corresponding paths.
+The jar is automatically copied to the bin directory of the dbpedia-spotlight. It will be used to run the server and to be used by other programs. Be careful, if you move it, be sure to change the corresponding paths.
    
-5) Set the indexes for the English and Spanish dumps
+5 Set the indexes for the English and Spanish dumps
 
-   mkdir data
-   wget 'https://siuc05.si.ehu.es/~ragerri/index-spotlight/index-en.tar.gz'
-   wget 'https://siuc05.si.ehu.es/~ragerri/index-spotlight/index-es.tar.gz'
-   tar xvzf index-en.tar.gz
-   tar xvzf index-es.tar.gz
+  mkdir data
+  wget 'https://siuc05.si.ehu.es/~ragerri/index-spotlight/index-en.tar.gz'
+  wget 'https://siuc05.si.ehu.es/~ragerri/index-spotlight/index-es.tar.gz'
+  tar xvzf index-en.tar.gz
+  tar xvzf index-es.tar.gz
 
-6) Find the pos-en-general-brown.HiddenMarkovModel
+6 Find the pos-en-general-brown.HiddenMarkovModel
 
-   Although this file is not used, it is necessary to set its locations in the server.properties files to the correct working of the spotlight. 
+Although this file is not used, it is necessary to set its locations in the server.properties files to the correct working of the spotlight. 
 
-   Please, change the value manually. 
+Please, change the value manually. 
 
-   The properties files contain the default value:
+The properties files contain the default value:
+
+    org.dbpeida.spotlight.tagging.hmm = pos-en-general-brown.HiddenMarkovModel
    
-	org.dbpedia.spotlight.tagging.hmm = pos-en-general-brown.HiddenMarkovModel
-   
-   It is necessary to change the value for the one obtained by the command: 
+It is necessary to change the value for the one obtained by the command: 
 
-      find . -name "*pos-en-general-brown.HiddenMarkovModel*"
+   find . -name "*pos-en-general-brown.HiddenMarkovModel*"
 
 ### 3 Run the servers
 
