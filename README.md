@@ -69,17 +69,17 @@ This command creates (among others)
 
      dbpedia-spotlight-0.6-jar-with-dependencies.jar
 
-     It is a jar containing all the necessary classes to run the dbpedia-spotlight with all the required dependencies. This jar is obtained with two purposes: a) to run the server, and b) to be used by other programs 
+It is a jar containing all the necessary classes to run the dbpedia-spotlight with all the required dependencies. This jar is obtained with two purposes: a) to run the server, and b) to be used by other programs 
 
 The jar is automatically copied to the bin directory of the dbpedia-spotlight. It will be used to run the server and to be used by other programs. Be careful, if you move it, be sure to change the corresponding paths.
    
 #### Set the indexes for the English and Spanish dumps
 
-  mkdir data
-  wget 'https://siuc05.si.ehu.es/~ragerri/index-spotlight/index-en.tar.gz'
-  wget 'https://siuc05.si.ehu.es/~ragerri/index-spotlight/index-es.tar.gz'
-  tar xvzf index-en.tar.gz
-  tar xvzf index-es.tar.gz
+     mkdir data
+     wget 'https://siuc05.si.ehu.es/~ragerri/index-spotlight/index-en.tar.gz'
+     wget 'https://siuc05.si.ehu.es/~ragerri/index-spotlight/index-es.tar.gz'
+     tar xvzf index-en.tar.gz
+     tar xvzf index-es.tar.gz
 
 #### Find the pos-en-general-brown.HiddenMarkovModel
 
