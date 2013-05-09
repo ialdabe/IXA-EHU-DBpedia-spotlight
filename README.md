@@ -99,25 +99,24 @@ It is necessary to change the value for the one obtained by the command:
 
 ### 3 Run the servers
 
-- Before runing the servers, verify that the dbpedia-spotlight directory contains:
+Before runing the servers, verify that the dbpedia-spotlight directory contains:
 
-    * data/index-en directory
-    * data/index-es directory
-    * the correct location of the pos-en-general-brown.HiddenMarkovModel model
-    * bin/dbpedia-spotlight-0.6-jar-with-dependencies.jar 
+       data/index-en directory
+       data/index-es directory
+       the correct location of the pos-en-general-brown.HiddenMarkovModel model
+       bin/dbpedia-spotlight-0.6-jar-with-dependencies.jar
 
 If something is missing, go step by step in the install.sh script. 
 
-- Go to the bin directory.
+Once everything is correct, go to the bin directory.
 
-- Run the server to disambiguate English entities
+* Run the server to disambiguate English entities
+  
+  java -jar dbpedia-spotlight-0.6-jar-with-dependencies.jar server_en.properties
 
-    java -jar dbpedia-spotlight-0.6-jar-with-dependencies.jar server_en.properties
+* Run the server to disambiguate Spanish entities
 
-- Run the server to disambiguate Spanish entities
-
-    java -jar dbpedia-spotlight-0.6-jar-with-dependencies.jar server_es.properties
-
+  java -jar dbpedia-spotlight-0.6-jar-with-dependencies.jar server_es.properties
    
 The English version works on: http://localhost:2020/rest
 
