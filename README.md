@@ -35,13 +35,13 @@ manually control each step of the process.
 
 Steps: 
 
-1 Download the dbpedia spotlight
+## 1 Download the dbpedia spotlight
 
    git clone https://github.com/dbpedia-spotlight/dbpedia-spotlight.git
 
 The latest version of the dbpedia-spotlight is obtained and it is stored in the "dbpedia-spotlight" directory
 
-2 Modify some of the configuration files
+## 2 Modify some of the configuration files
 
 Copy from IXA-EHU-DBpedia-spotlight to dbpedia-spotlight the following files:
 
@@ -54,7 +54,7 @@ server_en.properties and server_es.properties files contain the necessary inform
 
 The two pom.xml files are modified versions of the original ones to adapt the depedencies to our needs. 
 
-3 Install the dbpedia spotlight
+## 3 Install the dbpedia spotlight
 
   cd dbpedia-spotlight
   mvn clean install
