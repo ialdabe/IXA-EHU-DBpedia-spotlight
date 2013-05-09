@@ -85,6 +85,8 @@ The jar is automatically copied to the bin directory of the dbpedia-spotlight. I
 
 Although this file is not used, it is necessary to set its locations in the server.properties files to the correct working of the spotlight. 
 
+	 find . -name "*HiddenMarkovModel"
+
 Please, change the value manually. 
 
 The properties files contain the default value:
