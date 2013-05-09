@@ -12,6 +12,8 @@ Maven 3
 ### 1 Download this repository
 
 git clone git@github.com:ialdabe/IXA-EHU-DBpedia-spotlight.git
+OR
+git clone  git://github.com/ialdabe/IXA-EHU-DBpedia-spotlight.git
 
 The command will create a directory called
 IXA-EHU-DBpedia-spotlight. This repository contains all the necessary
