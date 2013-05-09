@@ -35,13 +35,13 @@ manually control each step of the process.
 
 Steps: 
 
-## 1 Download the dbpedia spotlight
+#### Download the dbpedia spotlight
 
    git clone https://github.com/dbpedia-spotlight/dbpedia-spotlight.git
 
 The latest version of the dbpedia-spotlight is obtained and it is stored in the "dbpedia-spotlight" directory
 
-## 2 Modify some of the configuration files
+#### Modify some of the configuration files
 
 Copy from IXA-EHU-DBpedia-spotlight to dbpedia-spotlight the following files:
 
@@ -54,12 +54,12 @@ server_en.properties and server_es.properties files contain the necessary inform
 
 The two pom.xml files are modified versions of the original ones to adapt the depedencies to our needs. 
 
-## 3 Install the dbpedia spotlight
+#### Install the dbpedia spotlight
 
   cd dbpedia-spotlight
   mvn clean install
 
-4 Create a jar to run the dbpedia spotlight as a service
+#### Create a jar to run the dbpedia spotlight as a service
 
   cd dbpedia-spotlight/dist
   mvn clean package
@@ -70,7 +70,7 @@ This command creates (among others)
 
 The jar is automatically copied to the bin directory of the dbpedia-spotlight. It will be used to run the server and to be used by other programs. Be careful, if you move it, be sure to change the corresponding paths.
    
-5 Set the indexes for the English and Spanish dumps
+#### Set the indexes for the English and Spanish dumps
 
   mkdir data
   wget 'https://siuc05.si.ehu.es/~ragerri/index-spotlight/index-en.tar.gz'
@@ -78,7 +78,7 @@ The jar is automatically copied to the bin directory of the dbpedia-spotlight. I
   tar xvzf index-en.tar.gz
   tar xvzf index-es.tar.gz
 
-6 Find the pos-en-general-brown.HiddenMarkovModel
+#### Find the pos-en-general-brown.HiddenMarkovModel
 
 Although this file is not used, it is necessary to set its locations in the server.properties files to the correct working of the spotlight. 
 
