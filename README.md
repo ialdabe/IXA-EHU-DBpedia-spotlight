@@ -62,12 +62,14 @@ The two pom.xml files are modified versions of the original ones to adapt the de
 
 #### Create a jar to run the dbpedia spotlight as a service
 
-  cd dbpedia-spotlight/dist
-  mvn clean package
+     cd dbpedia-spotlight/dist
+     mvn clean package
 
 This command creates (among others)
 
-     - dbpedia-spotlight-0.6-jar-with-dependencies.jar: a jar containing all the necessary classes to run the dbpedia-spotlight with all the required dependencies. This jar is obtained with two purposes: a) to run the server, and b) to be used by other programs 
+     dbpedia-spotlight-0.6-jar-with-dependencies.jar
+
+     It is a jar containing all the necessary classes to run the dbpedia-spotlight with all the required dependencies. This jar is obtained with two purposes: a) to run the server, and b) to be used by other programs 
 
 The jar is automatically copied to the bin directory of the dbpedia-spotlight. It will be used to run the server and to be used by other programs. Be careful, if you move it, be sure to change the corresponding paths.
    
