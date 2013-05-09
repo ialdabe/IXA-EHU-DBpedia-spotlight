@@ -56,8 +56,9 @@ The two pom.xml files are modified versions of the original ones to adapt the de
 
 #### Install the dbpedia spotlight
 
-  cd dbpedia-spotlight
-  mvn clean install
+     cd dbpedia-spotlight
+     mvn clean install
+
 
 #### Create a jar to run the dbpedia spotlight as a service
 
@@ -86,7 +87,7 @@ Please, change the value manually.
 
 The properties files contain the default value:
 
-    org.dbpeida.spotlight.tagging.hmm = pos-en-general-brown.HiddenMarkovModel
+    org.dbpedia.spotlight.tagging.hmm = pos-en-general-brown.HiddenMarkovModel
    
 It is necessary to change the value for the one obtained by the command: 
 
