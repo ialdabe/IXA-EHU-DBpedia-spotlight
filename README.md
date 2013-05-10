@@ -26,7 +26,7 @@ modified version is focused on the disambiguation of given entities.
 
 ### 2 Run the script 
 
-    sh install.sh
+    sh install.bash
 
 The script install.sh obtains the latest version of the dbpedia
 spotlight and it modifies some of the files to run "our" version of
@@ -71,7 +71,6 @@ This command creates (among others)
 
 It is a jar containing all the necessary classes to run the dbpedia-spotlight with all the required dependencies. This jar is obtained with two purposes: a) to run the server, and b) to be used by other programs 
 
-The jar is automatically copied to the bin directory of the dbpedia-spotlight. It will be used to run the server and to be used by other programs. Be careful, if you move it, be sure to change the corresponding paths.
    
 #### Set the indexes for the English and Spanish dumps
 
@@ -104,19 +103,19 @@ Before runing the servers, verify that the dbpedia-spotlight directory contains:
        data/index-en directory
        data/index-es directory
        the correct location of the pos-en-general-brown.HiddenMarkovModel model
-       bin/dbpedia-spotlight-0.6-jar-with-dependencies.jar
+       dist/target/dbpedia-spotlight-0.6-jar-with-dependencies.jar
 
 If something is missing, go step by step in the install.sh script. 
 
-Once everything is correct, go to the bin directory.
+Once everything is correct, go to the conf directory.
 
-* Run the server to disambiguate English entities
+* Run the server to disambiguate English entities (go to the conf directory)
   
-  java -jar dbpedia-spotlight-0.6-jar-with-dependencies.jar server_en.properties
+  java -jar ../dist/target/dbpedia-spotlight-0.6-jar-with-dependencies.jar server_en.properties
 
-* Run the server to disambiguate Spanish entities
+* Run the server to disambiguate Spanish entities (go to the conf directory)
 
-  java -jar dbpedia-spotlight-0.6-jar-with-dependencies.jar server_es.properties
+  java -jar ../dist/target/dbpedia-spotlight-0.6-jar-with-dependencies.jar server_es.properties
    
 The English version works on: http://localhost:2020/rest
 
