@@ -75,10 +75,10 @@ It is a jar containing all the necessary classes to run the dbpedia-spotlight wi
 #### Set the indexes for the English and Spanish dumps
 
      mkdir data
-     wget 'https://siuc05.si.ehu.es/~ragerri/index-spotlight/index-en.tar.gz'
-     wget 'https://siuc05.si.ehu.es/~ragerri/index-spotlight/index-es.tar.gz'
-     tar xvzf index-en.tar.gz
-     tar xvzf index-es.tar.gz
+     wget 'https://siuc05.si.ehu.es/~ragerri/index-spotlight/index-en.tgz'
+     wget 'https://siuc05.si.ehu.es/~ragerri/index-spotlight/index-es.tgz'
+     tar xvzf index-en.tgz
+     tar xvzf index-es.tgz
 
 #### Find the pos-en-general-brown.HiddenMarkovModel
 
